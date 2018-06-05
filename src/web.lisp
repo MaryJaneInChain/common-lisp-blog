@@ -6,7 +6,8 @@
         :common-lisp-blog.view
         :common-lisp-blog.db
         :datafly
-        :sxql)
+        :sxql
+		:cl-env)
   (:export :*web*))
 (in-package :common-lisp-blog.web)
 
@@ -19,6 +20,7 @@
 (defclass <web> (<app>) ())
 (defvar *web* (make-instance '<web>))
 (clear-routing-rules *web*)
+(init #p"~/git/common-lisp-blog/.env")
 
 ;;
 ;; Routing rules
