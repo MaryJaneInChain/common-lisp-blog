@@ -22,9 +22,11 @@
 
 ;;
 ;; Routing rules
-
 (defroute "/" ()
-  (render #P"index.html"))
+  (render #P"index.html"
+		  (list :global
+				(list :title (getenv "TITLE")
+					  :description (getenv "DESCRIPTION")))))
 
 ;;
 ;; Error pages

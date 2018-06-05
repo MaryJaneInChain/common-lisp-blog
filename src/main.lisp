@@ -1,6 +1,7 @@
 (in-package :cl-user)
 (defpackage common-lisp-blog
-  (:use :cl)
+  (:use :cl
+		:cl-env)
   (:import-from :common-lisp-blog.config
                 :config)
   (:import-from :clack
@@ -11,6 +12,9 @@
 
 (defvar *appfile-path*
   (asdf:system-relative-pathname :common-lisp-blog #P"app.lisp"))
+
+(defvar *env*
+  (asdf:system-relative-pathname :common-lisp-blog #P".env"))
 
 (defvar *handler* nil)
 

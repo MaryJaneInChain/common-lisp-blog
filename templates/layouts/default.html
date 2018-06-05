@@ -6,6 +6,18 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
 </head>
 <body>
-  {% block content %}{% endblock %}
+  <div class="header">
+	{% block header %}{% endblock %}
+  </div>
+  <div class="navbar">
+	{% block navbar %}{% endblock %}
+  </div>
+  <div class="content">
+	{% block content %}{% endblock %}
+  </div>
+  <div class="footer">
+	{% block footer %}{% endblock %}
+	<div id="powered">由 <a href="http://8arrow.org/caveman/">caveman2</a> 荣誉驱动</div>
+  </div>
 </body>
 </html>

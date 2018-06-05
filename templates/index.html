@@ -1,7 +1,14 @@
 {% extends "layouts/default.html" %}
-{% block title %}Welcome to Caveman2{% endblock %}
+
+{% block title %}{{ global.title }}{% endblock %}
+
+{% block header %}
+<div id=title>{{ global.title }}</div>
+<div id=description>{{ global.description }}</div>  
+{% endblock %}
+
 {% block content %}
 <div id="main">
-  Welcome to <a href="http://8arrow.org/caveman/">Caveman2</a>!
+  {{ global.content }}
 </div>
 {% endblock %}
