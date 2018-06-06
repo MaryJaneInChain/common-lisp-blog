@@ -1,0 +1,16 @@
+{% extends "layouts/default.html" %}
+
+{% block title %}{{ global.title }}{% endblock %}
+
+{% block header %}
+<div id=banner>
+  <div id=title>{{ global.title }}</div>
+  <div id=description>{{ global.description }}</div>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div id="main">
+  {{ global.content }}
+</div>
+{% endblock %}
