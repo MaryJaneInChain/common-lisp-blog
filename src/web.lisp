@@ -20,15 +20,17 @@
 (defclass <web> (<app>) ())
 (defvar *web* (make-instance '<web>))
 (clear-routing-rules *web*)
-(init #p"~/Git/common-lisp-blog/.env")
+(init #p"~/git/common-lisp-blog/.env")
+(defparameter *variables*
+  (list :global
+		(list :title (getenv "TITLE")
+			  :description (getenv "DESCRIPTION"))))
 
 ;;
 ;; Routing rules
 (defroute "/" ()
   (render #P"index.html"
-		  (list :global
-				(list :title (getenv "TITLE")
-					  :description (getenv "DESCRIPTION")))))
+		  *variables*))
 
 ;;
 ;; Error pages
