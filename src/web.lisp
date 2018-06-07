@@ -20,7 +20,7 @@
 (defclass <web> (<app>) ())
 (defvar *web* (make-instance '<web>))
 (clear-routing-rules *web*)
-(init #p"~/git/common-lisp-blog/.env")
+(init #p"~/Git/common-lisp-blog/.env")
 
 ;;
 ;; Routing rules
